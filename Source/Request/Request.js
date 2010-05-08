@@ -19,12 +19,12 @@ var Request = new Class({
 	Implements: [Chain, Events, Options],
 
 	options: {/*
-		onRequest: nil,
-		onComplete: nil,
-		onCancel: nil,
-		onSuccess: nil,
-		onFailure: nil,
-		onException: nil,*/
+		onRequest: Function.empty,
+		onComplete: Function.empty,
+		onCancel: Function.empty,
+		onSuccess: Function.empty,
+		onFailure: Function.empty,
+		onException: Function.empty,*/
 		url: '',
 		data: '',
 		headers: {

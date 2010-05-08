@@ -23,7 +23,9 @@ Function.extend({
 			} catch (e){}
 		}
 		return null;
-	}
+	},
+	
+	empty: function(){}
 
 });
 
@@ -83,6 +85,7 @@ Function.implement({
 	
 });
 
-var $try = Function.attempt;
+$try = Function.attempt;
+$empty = Function.empty;
 
 //</1.2compat>

@@ -22,9 +22,9 @@ var Fx = this.Fx = new Class({
 
 	options: {
 		/*
-		onStart: nil,
-		onCancel: nil,
-		onComplete: nil,
+		onStart: Function.empty,
+		onCancel: Function.empty,
+		onComplete: Function.empty,
 		*/
 		fps: 50,
 		unit: false,
