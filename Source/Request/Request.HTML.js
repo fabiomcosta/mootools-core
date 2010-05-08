@@ -36,12 +36,12 @@ Request.HTML = new Class({
 		if (match) response.html = match[1];
 		var temp = new Element('div').set('html', response.html);
 
-		response.tree = temp.childNodes;
+		response.tree = temp.getChildren();
 		response.elements = temp.getElements('*');
 
 		if (options.filter) response.tree = response.elements.filter(options.filter);
 		if (options.update) document.id(options.update).empty().set('html', response.html);
-		else if (options.append) document.id(options.append).adopt(temp.getChildren());
+		else if (options.append) document.id(options.append).adopt(response.tree);
 		if (options.evalScripts) Browser.exec(response.javascript);
 
 		this.onSuccess(response.tree, response.elements, response.html, response.javascript);
